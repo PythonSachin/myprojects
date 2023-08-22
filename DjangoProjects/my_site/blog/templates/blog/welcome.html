@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title%}
+  My Blog
+{% endblock %}
+
+{% block css_files%}
+  <link rel = "stylesheet" href = "{% static 'blog/welcome.css'%}" />
+{% endblock%}
+
+{% block content %}
+
+
+ <section id  = "welcome">
+     <header>
+        <img src = "{% static 'blog/images/mountains.jpg' %}" alt = "Sachin- The author of this blog" />
+        <h2>Sachin's Blog</h2>
+     </header>   
+     <p>Hi I am Sachin and I love to blog about tech and world</p>
+ </section>
+
+ <section id = "latest-posts">
+    <h2>My Latest Thoughts</h2>
+    <ul>
+        {% include "blog/includes/post.html"%}
+    </ul>
+ </section>
+
+ <section id = "about">
+    <h2>What I Do!</h2>
+    <p>I love programming and i also love to help others and i enjoy exploring various technologies in general!</p>
+    <p>My goal is to grow as a developer in software and join the largest companies in the world</p>
+ </section>
+
+  <h1>Welcome to my Blog</h1>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title%}
+  This Post title
+{% endblock %}
+
+{% block css_files%}
+  <link rel = "stylesheet" href = "{% static 'blog/post-detail.css'%}" />
+{% endblock%}
+
+{% block content %}
+  <section id = 'summary'>
+     <h2>Post Title</h2>
+     <article>
+        <img src = "{% static 'blog/images/mountains.jpg'%}" alt = "Post-Title" >
+        <address>By Sachin</address>
+        <div>
+            Last Updated on <time> August 3rd </time>
+        </div>
+     </article>
+  </section>
+
+  <main>
+    <p>
+        Hello This is my first time making a site so i started with a 
+        blogging site on which i have created using the templates of django 
+        and i am quite excited to do this work.
+    </p>
+
+    <p>
+        Hello This is my first time making a site so i started with a 
+        blogging site on which i have created using the templates of django 
+        and i am quite excited to do this work.
+    </p>
+
+    <p>
+        Hello This is my first time making a site so i started with a 
+        blogging site on which i have created using the templates of django 
+        and i am quite excited to do this work.
+    </p>
+  </main>
+{% endblock %}
